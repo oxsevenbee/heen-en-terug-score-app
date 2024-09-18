@@ -7,20 +7,22 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "tauri": "tauri"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.3",
     "d3": "^7.9.0",
     "html-to-image": "^1.11.11",
     "js-base64": "^3.7.5",
-    "long":  "5.2.3"
+    "long": "5.2.3"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "@tauri-apps/cli": "^2.0.0-rc.16",
+    "@wasm-tool/rollup-plugin-rust": "^2.4.2",
     "svelte": "^4.2.19",
     "vite": "^5.4.2",
-    "vitest": "2.0.5",
-    "@wasm-tool/rollup-plugin-rust": "^2.4.2"
+    "vitest": "2.0.5"
   }
 }
