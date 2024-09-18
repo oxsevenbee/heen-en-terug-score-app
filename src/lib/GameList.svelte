@@ -152,7 +152,7 @@
 
 </style>
 
-<h1>Heen en terug</h1>
+<h1>Heen &amp; terug</h1>
 
 <div class="list">
     {#each games as game (game.id)}
