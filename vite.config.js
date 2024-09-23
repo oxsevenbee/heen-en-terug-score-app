@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import rust from "@wasm-tool/rollup-plugin-rust";
 
+const host = process.env.TAURI_DEV_HOST;
 
 let rustPluginInstance = rust({
   verbose: true,
@@ -16,5 +17,11 @@ rustPluginInstance["handleHotUpdate"] = (ctx) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  clearScreen: false,
+  server: {
+    host: host || false,
+    port: 5173,
+    strictPort: true,
+  },
   plugins: [svelte(), rustPluginInstance],
 })
